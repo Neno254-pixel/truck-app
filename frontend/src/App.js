@@ -6,8 +6,8 @@ import ResultPanel from './components/ResultPanel';
 import LogGridSvg from './components/LogGridSvg';
 import './App.css';
 
-// API Base URL - Local development
-const API_BASE_URL = 'http://localhost:8000';
+// API Base URL - uses environment variable or defaults to localhost
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 function App() {
   const [formData, setFormData] = useState({
